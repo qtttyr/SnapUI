@@ -64,10 +64,10 @@ Commands:
   --help           Show this help
 
 Examples:
-  ${pc.cyan('npx snapui')}
-  ${pc.cyan('npx snapui https://stripe.com')}
-  ${pc.cyan('npx snapui doctor')}
-  ${pc.cyan('npx snapui uninstall')}
+  ${pc.cyan('npx snapui-cli')}
+  ${pc.cyan('npx snapui-cli https://stripe.com')}
+  ${pc.cyan('npx snapui-cli doctor')}
+  ${pc.cyan('npx snapui-cli uninstall')}
 `);
 }
 

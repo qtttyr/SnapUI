@@ -16,7 +16,7 @@ export function generateSvelte(componentName: string, root: IRNode, style: Style
 
   return `<!--
   ${name}
-  Captured with SnapUI — https://github.com/snapui
+  Captured with SnapUI — https://github.com/qtttyr/SnapUI
 -->
 ${scriptBlock}${markup}
 ${styleBlock}`;

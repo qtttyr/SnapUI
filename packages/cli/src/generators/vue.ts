@@ -14,7 +14,7 @@ export function generateVue(componentName: string, root: IRNode, style: StyleFla
 
   return `<!--
   ${name}
-  Captured with SnapUI — https://github.com/snapui
+  Captured with SnapUI — https://github.com/qtttyr/SnapUI
 -->
 <script setup lang="ts">
 ${style === 'tailwind' ? '// Styling: Tailwind utility classes are embedded in the markup.' : `import '../styles/${kebab(name)}.css';`}

@@ -12,7 +12,7 @@ export default function DownloadPage() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('npx snapui');
+    navigator.clipboard.writeText('npx snapui-cli');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -45,7 +45,7 @@ export default function DownloadPage() {
               </div>
               <div className="dl-cmd-row">
                 <span className="prompt">$</span>
-                <code className="cmd">npx snapui</code>
+                <code className="cmd">npx snapui-cli</code>
                 <button onClick={handleCopy} className="copy-btn">
                   {copied ? '✓ Copied' : 'Copy'}
                 </button>
@@ -78,9 +78,9 @@ export default function DownloadPage() {
             <Reveal delay={100}>
               <div className="dl-step">
                 <div className="step-num">02</div>
-                <h3>Run npx snapui</h3>
+                <h3>Run npx snapui-cli</h3>
                 <p>No global install needed. SnapUI opens Chrome in isolated mode with our live overlay.</p>
-                <div className="mini-code"><code>npx snapui [url]</code></div>
+                <div className="mini-code"><code>npx snapui-cli [url]</code></div>
               </div>
             </Reveal>
 
@@ -116,7 +116,7 @@ export default function DownloadPage() {
             <div className="trust-card">
               <span className="trust-icon">🗑️</span>
               <h3>1-Command Purge</h3>
-              <p>Want to clean up? Remove all cached Chrome downloads and settings anytime using <code>npx snapui uninstall</code>.</p>
+              <p>Want to clean up? Remove all cached Chrome downloads and settings anytime using <code>npx snapui-cli uninstall</code>.</p>
             </div>
           </div>
         </section>
@@ -131,7 +131,7 @@ export default function DownloadPage() {
                 <p>If you ever want to delete SnapUI and free up space, run this single command in your terminal:</p>
               </div>
               <div className="un-cmd">
-                <code>npx snapui uninstall</code>
+                <code>npx snapui-cli uninstall</code>
               </div>
             </div>
           </Reveal>
@@ -144,7 +144,7 @@ export default function DownloadPage() {
           <Link href="/">Home</Link>
           <Link href="/docs">Docs</Link>
           <Link href="/pricing">Pricing</Link>
-          <a href="https://github.com">GitHub</a>
+          <a href="https://github.com/qtttyr/SnapUI">GitHub</a>
         </span>
       </footer>
     </>

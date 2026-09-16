@@ -5,21 +5,21 @@ import Reveal from './Reveal';
 
 const COMMANDS = [
   {
-    cmd: 'npx snapui [url]',
+    cmd: 'npx snapui-cli [url]',
     desc: 'Launch an interactive capture session for a specific target website URL.',
-    example: 'npx snapui https://stripe.com',
+    example: 'npx snapui-cli https://stripe.com',
     details: 'Opens Chromium in isolated profile mode or connects via CDP port 9222. Injects element picker overlay and in-browser control panel.',
   },
   {
-    cmd: 'npx snapui config',
+    cmd: 'npx snapui-cli config',
     desc: 'View & edit SnapUI global settings (default framework, styling flavor, LLM API keys).',
-    example: 'npx snapui config',
+    example: 'npx snapui-cli config',
     details: 'Saves your preferences to ~/.snapui/config.json for automatic reuse across projects.',
   },
   {
-    cmd: 'SNAPUI_PORT=9222 npx snapui',
+    cmd: 'SNAPUI_PORT=9222 npx snapui-cli',
     desc: 'Attach SnapUI to your logged-in Google Chrome instance.',
-    example: 'google-chrome --remote-debugging-port=9222\nSNAPUI_PORT=9222 npx snapui https://app.dashboard.com',
+    example: 'google-chrome --remote-debugging-port=9222\nSNAPUI_PORT=9222 npx snapui-cli https://app.dashboard.com',
     details: 'Zero downloads, zero re-logins. Captures paywalled or internal dashboard elements using your existing browser session.',
   },
 ];

@@ -62,17 +62,17 @@ export default function DocsPage() {
                 <h2>Zero setup required</h2>
                 <p>
                   SnapUI requires no build steps or global configuration to start using.
-                  Run the CLI directly using <code>npx snapui</code> in any terminal.
+                  Run the CLI directly using <code>npx snapui-cli</code> in any terminal.
                 </p>
                 <div className="doc-code-card">
                   <div className="card-head"><span>Terminal</span><span className="badge">Bash / Zsh / PowerShell</span></div>
-                  <pre><code>npx snapui</code></pre>
+                  <pre><code>npx snapui-cli</code></pre>
                 </div>
                 <p>
                   Or specify a target URL directly to launch Google Chrome immediately focused on that site:
                 </p>
                 <div className="doc-code-card">
-                  <pre><code>npx snapui https://stripe.com</code></pre>
+                  <pre><code>npx snapui-cli https://stripe.com</code></pre>
                 </div>
               </Reveal>
             </section>
@@ -89,24 +89,24 @@ export default function DocsPage() {
                     <span>Example</span>
                   </div>
                   <div className="table-row">
-                    <td><code>npx snapui [url]</code></td>
+                    <td><code>npx snapui-cli [url]</code></td>
                     <td>Starts an interactive element selection session.</td>
-                    <td><code>npx snapui https://linear.app</code></td>
+                    <td><code>npx snapui-cli https://linear.app</code></td>
                   </div>
                   <div className="table-row">
-                    <td><code>npx snapui config</code></td>
+                    <td><code>npx snapui-cli config</code></td>
                     <td>Opens interactive prompt for LLM keys, styling targets, and output dirs.</td>
-                    <td><code>npx snapui config</code></td>
+                    <td><code>npx snapui-cli config</code></td>
                   </div>
                   <div className="table-row">
-                    <td><code>npx snapui doctor</code></td>
+                    <td><code>npx snapui-cli doctor</code></td>
                     <td>Verifies Chrome installation, OS compatibility, and environment paths.</td>
-                    <td><code>npx snapui doctor</code></td>
+                    <td><code>npx snapui-cli doctor</code></td>
                   </div>
                   <div className="table-row">
-                    <td><code>npx snapui uninstall</code></td>
+                    <td><code>npx snapui-cli uninstall</code></td>
                     <td>Completely purges <code>~/.snapui</code> browser cache and settings.</td>
-                    <td><code>npx snapui uninstall</code></td>
+                    <td><code>npx snapui-cli uninstall</code></td>
                   </div>
                 </div>
               </Reveal>
@@ -235,7 +235,7 @@ export default function DocsPage() {
                 </p>
                 <div className="doc-code-card highlight">
                   <div className="card-head"><span>Terminal</span><span className="badge warning">Clean Purge</span></div>
-                  <pre><code>npx snapui uninstall</code></pre>
+                  <pre><code>npx snapui-cli uninstall</code></pre>
                 </div>
                 <p className="sub">
                   This immediately removes <code>~/.snapui</code> and frees ~150MB of disk space.
@@ -252,7 +252,7 @@ export default function DocsPage() {
           <Link href="/">Home</Link>
           <Link href="/download">Download</Link>
           <Link href="/pricing">Pricing</Link>
-          <a href="https://github.com">GitHub</a>
+          <a href="https://github.com/qtttyr/SnapUI">GitHub</a>
         </span>
       </footer>
     </>

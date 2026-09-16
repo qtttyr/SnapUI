@@ -96,7 +96,7 @@ function indentBlock(s: string, levels: number): string {
 }
 
 function header(name: string): string {
-  return `/**\n * ${name}\n * Captured with SnapUI — https://github.com/snapui\n * Auto-generated from a live DOM capture. Review & refine freely.\n */\n`;
+  return `/**\n * ${name}\n * Captured with SnapUI — https://github.com/qtttyr/SnapUI\n * Auto-generated from a live DOM capture. Review & refine freely.\n */\n`;
 }
 
 export function modulePrefix(style: StyleFlavor): string {

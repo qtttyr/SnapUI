@@ -17,9 +17,9 @@
 
 <br />
 
-[![npm version](https://img.shields.io/npm/v/snapui.svg?style=for-the-badge&color=ff4d00&logo=npm)](https://www.npmjs.com/package/snapui-cli)
+[![npm version](https://img.shields.io/npm/v/snapui-cli.svg?style=for-the-badge&color=ff4d00&logo=npm)](https://www.npmjs.com/package/snapui-cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg?style=for-the-badge&color=ff4d00)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Windows%20%7C%20Linux-black.svg?style=for-the-badge)](https://github.com)
+[![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Windows%20%7C%20Linux-black.svg?style=for-the-badge)](https://github.com/qtttyr/SnapUI)
 [![Chrome CDP](https://img.shields.io/badge/Engine-Chrome_CDP-ff4d00.svg?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromedevtools.github.io/devtools-protocol/)
 
 <br />

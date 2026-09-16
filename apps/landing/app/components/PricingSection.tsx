@@ -38,7 +38,7 @@ export default function PricingSection() {
             <div className="pricing-action">
               <Magnetic>
                 <a href="#how" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                  npx snapui →
+                  npx snapui-cli →
                 </a>
               </Magnetic>
             </div>
@@ -66,7 +66,7 @@ export default function PricingSection() {
 
             <div className="pricing-action">
               <Magnetic>
-                <a href="https://github.com" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>
+                <a href="https://github.com/qtttyr/SnapUI" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>
                   Contact Enterprise →
                 </a>
               </Magnetic>

@@ -47,9 +47,9 @@ export default function Nav() {
           <span className="nav-version">v0.1 · MIT</span>
           <span className="nav-live"><i />live</span>
           <Link href="/download" className="btn btn-primary nav-dl-btn">
-            npx snapui
+            npx snapui-cli
           </Link>
-          <a href="https://github.com" className="btn btn-ghost nav-gh" target="_blank" rel="noreferrer">
+          <a href="https://github.com/qtttyr/SnapUI" className="btn btn-ghost nav-gh" target="_blank" rel="noreferrer">
             GitHub ↗
           </a>
         </div>

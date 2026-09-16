@@ -5,7 +5,7 @@ import Reveal from './Reveal';
 
 export default function DownloadSection() {
   const [copied, setCopied] = useState(false);
-  const command = 'npx snapui';
+  const command = 'npx snapui-cli';
 
   const copyCommand = () => {
     navigator.clipboard.writeText(command);

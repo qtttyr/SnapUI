@@ -52,7 +52,7 @@ export default function Home() {
             </p>
             <div className="hero-cta">
               <Magnetic>
-                <a href="#how" className="btn btn-primary">npx snapui →</a>
+                <a href="#how" className="btn btn-primary">npx snapui-cli →</a>
               </Magnetic>
               <Magnetic>
                 <a href="#try" className="btn btn-ghost">Try it below ↓</a>
@@ -104,7 +104,7 @@ export default function Home() {
         </Reveal>
         <div className="steps">
           {[
-            { n: '01', h: 'Point & click', p: 'SnapUI opens the site in Chrome (or attaches to your own Chrome with your logins). A signal-orange outline follows your cursor — click anything.', c: 'npx snapui' },
+            { n: '01', h: 'Point & click', p: 'SnapUI opens the site in Chrome (or attaches to your own Chrome with your logins). A signal-orange outline follows your cursor — click anything.', c: 'npx snapui-cli' },
             { n: '02', h: 'Real extraction', p: 'It walks the live DOM, reads actual computed styles, prunes browser defaults and renames anonymous nodes with clean BEM-ish names.', c: 'DOM → IR' },
             { n: '03', h: 'Code, not vibes', p: 'A deterministic generator turns the IR into your framework — with Storybook stories. Optional LLM polish, your key, your choice.', c: 'IR → React' },
           ].map((s) => (
@@ -220,7 +220,7 @@ export default function Home() {
               i: '↓',
               h: 'I don\'t have Chrome',
               p: 'First run of the CLI downloads a private copy of Chrome-for-Testing into ~/.snapui/browser. ~150 MB, once. Your system stays untouched.',
-              code: 'npx snapui  # auto-downloads',
+              code: 'npx snapui-cli  # auto-downloads',
             },
             {
               k: 'no',
@@ -264,7 +264,7 @@ export default function Home() {
             <h2 className="title" style={{ margin: '0 auto 20px' }}>Stop rebuilding what already exists.</h2>
             <p className="lead">Any site. Any element. One click. Real code.</p>
             <Magnetic>
-              <a href="#how" className="btn btn-primary">npx snapui →</a>
+              <a href="#how" className="btn btn-primary">npx snapui-cli →</a>
             </Magnetic>
             <p className="cta-fine">requires Google Chrome · everything stays on your machine</p>
           </div>
@@ -275,7 +275,7 @@ export default function Home() {
         <div className="wrap foot-inner">
           <span>snap·ui — built with its own philosophy: real DOM, real code.</span>
           <span style={{ display: 'flex', gap: 24 }}>
-            <a href="https://github.com">GitHub</a>
+            <a href="https://github.com/qtttyr/SnapUI">GitHub</a>
             <a href="#requirements">Requirements</a>
             <a href="#how">Docs</a>
             <a href="#">MIT License</a>

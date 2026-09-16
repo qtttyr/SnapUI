@@ -17,7 +17,7 @@ export function generateHtml(componentName: string, root: IRNode, style: StyleFl
       ? '<!-- Tailwind utility classes are embedded in the markup -->'
       : `<!-- Link this stylesheet from your page: ./styles/${cssName(componentName)}.css -->`;
 
-  return `<!-- ${componentName} — captured with SnapUI (https://github.com/snapui) -->
+  return `<!-- ${componentName} — captured with SnapUI (https://github.com/qtttyr/SnapUI) -->
 ${note}
 
 ${markup}

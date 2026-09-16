@@ -43,7 +43,7 @@ export default function PricingPage() {
                 <li>✓ 100% local offline execution</li>
               </ul>
               <Magnetic>
-                <Link href="/download" className="btn btn-primary p-btn">Start using npx snapui →</Link>
+                <Link href="/download" className="btn btn-primary p-btn">Start using npx snapui-cli →</Link>
               </Magnetic>
             </div>
           </Reveal>
@@ -101,7 +101,7 @@ export default function PricingPage() {
             <Reveal delay={200}>
               <div className="faq-item">
                 <h3>How do I clean up or uninstall SnapUI?</h3>
-                <p>Simply run <code>npx snapui uninstall</code> in your terminal. It completely deletes the <code>~/.snapui</code> directory and all cached Chrome binaries.</p>
+                <p>Simply run <code>npx snapui-cli uninstall</code> in your terminal. It completely deletes the <code>~/.snapui</code> directory and all cached Chrome binaries.</p>
               </div>
             </Reveal>
           </div>
@@ -114,7 +114,7 @@ export default function PricingPage() {
           <Link href="/">Home</Link>
           <Link href="/docs">Docs</Link>
           <Link href="/download">Download</Link>
-          <a href="https://github.com">GitHub</a>
+          <a href="https://github.com/qtttyr/SnapUI">GitHub</a>
         </span>
       </footer>
     </>
