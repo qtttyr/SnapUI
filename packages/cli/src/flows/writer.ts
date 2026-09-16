@@ -1,6 +1,6 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
-import type { GeneratedFile } from '@snapui/generators';
+import type { GeneratedFile } from '../generators/index.js';
 /** Write generated files to the target directory, returning absolute paths. */
 export function writeFiles(files: GeneratedFile[], outDir: string): string[] {
   const written: string[] = [];

@@ -22,7 +22,7 @@ ${BANNER} ${pc.dim('v0.1.0')} — ${pc.dim('click any element → get a real com
   }
 
   if (command === 'uninstall' || command === 'clean' || command === '--uninstall') {
-    const { uninstallSnapUI } = await import('@snapui/core');
+    const { uninstallSnapUI } = await import('./core/index.js');
     const res = uninstallSnapUI();
     if (res.existed) {
       p.log.success(pc.green(`SnapUI directory (${res.path}) and managed Chrome cache purged cleanly.`));
@@ -33,7 +33,7 @@ ${BANNER} ${pc.dim('v0.1.0')} — ${pc.dim('click any element → get a real com
   }
 
   if (command === 'doctor') {
-    const { getDoctorReport } = await import('@snapui/core');
+    const { getDoctorReport } = await import('./core/index.js');
     const report = getDoctorReport();
     p.log.step(pc.bold('SnapUI Diagnostics'));
     console.log(`  ${pc.dim('OS:')} ${report.os} (${report.arch})`);

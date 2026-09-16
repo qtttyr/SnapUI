@@ -10,10 +10,10 @@ import {
   assignClassNames,
   PANEL_SOURCE,
   type BrowserSession,
-} from '@snapui/core';
-import type { CaptureResult } from '@snapui/core';
-import { generate } from '@snapui/generators';
-import type { Framework, StyleFlavor } from '@snapui/generators';
+} from '../core/index.js';
+import type { CaptureResult } from '../core/index.js';
+import { generate } from '../generators/index.js';
+import type { Framework, StyleFlavor } from '../generators/index.js';
 import { loadConfig } from '../config.js';
 import { writeFiles } from './writer.js';
 
