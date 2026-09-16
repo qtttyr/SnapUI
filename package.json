@@ -1,0 +1,19 @@
+{
+  "name": "snapui-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "tsc -b packages/core packages/generators packages/cli",
+    "test": "node --test packages/generators/test/*.test.mjs packages/core/test/*.test.mjs",
+    "snapui": "node packages/cli/dist/index.js",
+    "landing": "npm run dev --workspace snapui-landing"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
