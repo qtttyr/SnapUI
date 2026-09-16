@@ -211,7 +211,8 @@ export async function runCaptureFlow(urlArg?: string): Promise<void> {
 
       const written = writeFiles(files, process.cwd());
       p.log.message(
-        written.map((w) => pc.magenta('  ⬒ ') + pc.dim(w.replace(process.cwd() + '/', ''))).join('\n'),
+        written.map((w) => pc.magenta('  ⬒ ') + pc.dim(w.replace(process.cwd() + '/', ''))).join('\n')
+        + (style === 'tailwind' ? pc.dim('\n  ⓘ Tailwind mode: utility classes are embedded directly in component markup') : ''),
       );
 
       await session.page.evaluate((state) => window.__snapuiPanelState?.(state), {

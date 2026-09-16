@@ -120,7 +120,7 @@ function __snapuiExtract(rootEl, opts) {
       const parts = [];
       for (const n of el.childNodes) {
         if (n.nodeType === Node.TEXT_NODE) {
-          const t = (n.textContent || '').replace(/\s+/g, ' ');
+          const t = (n.textContent || '').replace(/\\s+/g, ' ');
           if (t.trim()) parts.push(t.trim());
         }
       }
@@ -138,15 +138,15 @@ function __snapuiExtract(rootEl, opts) {
   const root = walk(rootEl, 0, null);
   if (!root) return null;
 
-  const JUNK_RE = /^(astro-[a-z0-9]+|jsx-\d+|css-[a-z0-9]+|s-[a-z0-9]+|data-v-[a-z0-9]+|ng-[a-z0-9]+|sc-[a-zA-Z0-9]+|__[a-z0-9_-]+|\d+|[0-9a-f]{6,})$/i;
-  const rawClasses = (typeof rootEl.className === 'string') ? rootEl.className.trim().split(/\s+/).filter(Boolean) : [];
-  const cleanClasses = rawClasses.filter((c) => !JUNK_RE.test(c) && /^[a-zA-Z][\w-]*$/.test(c));
+  const JUNK_RE = /^(astro-[a-z0-9]+|jsx-\\d+|css-[a-z0-9]+|s-[a-z0-9]+|data-v-[a-z0-9]+|ng-[a-z0-9]+|sc-[a-zA-Z0-9]+|__[a-z0-9_-]+|\\d+|[0-9a-f]{6,})$/i;
+  const rawClasses = (typeof rootEl.className === 'string') ? rootEl.className.trim().split(/\\s+/).filter(Boolean) : [];
+  const cleanClasses = rawClasses.filter((c) => !JUNK_RE.test(c) && /^[a-zA-Z][\\w-]*$/.test(c));
 
   const hint = {
     tag: rootEl.tagName.toLowerCase(),
     classes: cleanClasses.slice(0, 3),
     id: rootEl.id || undefined,
-    textSample: (rootEl.textContent || '').replace(/[^\x20-\x7E\u0400-\u04FF]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 50),
+    textSample: (rootEl.textContent || '').replace(/[^\\x20-\\x7E\\u0400-\\u04FF]/g, ' ').replace(/\\s+/g, ' ').trim().slice(0, 50),
   };
 
   return { root, assets: { images: [...new Set(images)] }, hint };
