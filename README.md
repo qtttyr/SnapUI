@@ -25,7 +25,7 @@
 <br />
 
 ```bash
-npx snapui
+npx snapui-cli
 ```
 
 </div>
@@ -55,7 +55,7 @@ No global installation. No configuration ceremony. Run directly anywhere:
 
 ```bash
 # Capture any live URL or open local browser
-npx snapui https://stripe.com
+npx snapui-cli https://stripe.com
 ```
 
 ### What happens when you run it:
@@ -104,11 +104,11 @@ SnapUI generates zero-dependency components for all modern stacks:
 
 | Command | Description |
 | :--- | :--- |
-| `npx snapui` | Start an interactive capture session |
-| `npx snapui [url]` | Open Chrome focused immediately on `[url]` |
-| `npx snapui config` | Configure LLM keys, target framework & default styling engine |
-| `npx snapui doctor` | Run system diagnostics (OS, Node, Chrome detection, disk usage) |
-| `npx snapui uninstall` | Purge `~/.snapui` browser cache and temporary binaries |
+| `npx snapui-cli` | Start an interactive capture session |
+| `npx snapui-cli [url]` | Open Chrome focused immediately on `[url]` |
+| `npx snapui-cli config` | Configure LLM keys, target framework & default styling engine |
+| `npx snapui-cli doctor` | Run system diagnostics (OS, Node, Chrome detection, disk usage) |
+| `npx snapui-cli uninstall` | Purge `~/.snapui` browser cache and temporary binaries |
 
 ---
 
@@ -119,7 +119,7 @@ SnapUI generates zero-dependency components for all modern stacks:
 - **Easy Clean Purge**: To remove all cached Chromium binaries (~150MB) and settings from your system:
 
 ```bash
-npx snapui uninstall
+npx snapui-cli uninstall
 ```
 
 ---

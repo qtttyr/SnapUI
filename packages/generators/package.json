@@ -1,5 +1,5 @@
 {
-  "name": "@snapui/generators",
+  "name": "snapui-generators",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -11,11 +11,11 @@
     "build": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "@snapui/core": "0.1.0"
+    "snapui-core": "0.1.0"
   },
   "devDependencies": {
     "typescript": "^5.6.0",
     "@types/node": "^22.0.0",
-    "@snapui/core": "0.1.0"
+    "snapui-core": "0.1.0"
   }
 }

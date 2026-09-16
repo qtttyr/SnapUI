@@ -1,5 +1,5 @@
 {
-  "name": "@snapui/cli",
+  "name": "snapui-cli",
   "version": "0.1.0",
   "type": "module",
   "bin": {
@@ -7,11 +7,11 @@
   },
   "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json && chmod +x dist/index.js"
   },
   "dependencies": {
-    "@snapui/core": "0.1.0",
-    "@snapui/generators": "0.1.0",
+    "snapui-core": "0.1.0",
+    "snapui-generators": "0.1.0",
     "@clack/prompts": "^0.8.2",
     "picocolors": "^1.1.1",
     "puppeteer-core": "^23.11.1"

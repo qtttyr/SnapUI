@@ -8,6 +8,13 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "sourceMap": false
+    "sourceMap": false,
+    "baseUrl": ".",
+    "paths": {
+      "@snapui/core": ["packages/core/dist/index.d.ts"],
+      "@snapui/generators": ["packages/generators/dist/index.d.ts"],
+      "snapui-core": ["packages/core/dist/index.d.ts"],
+      "snapui-generators": ["packages/generators/dist/index.d.ts"]
+    }
   }
 }
