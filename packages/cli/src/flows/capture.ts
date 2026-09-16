@@ -17,15 +17,27 @@ import type { Framework, StyleFlavor } from '../generators/index.js';
 import { loadConfig } from '../config.js';
 import { writeFiles } from './writer.js';
 
-function suggestName(hint: { tag: string; classes: string[]; id?: string }): string {
-  const source = hint.id || hint.classes[0] || hint.tag;
-  const cleaned = source.replace(/[^a-zA-Z0-9-_]/g, '');
-  const pascal = cleaned
-    .split(/[-_]/)
-    .filter(Boolean)
-    .map((w) => w[0].toUpperCase() + w.slice(1))
-    .join('');
-  return pascal || 'CapturedSection';
+function suggestName(hint: { tag: string; classes: string[]; id?: string; textSample?: string }): string {
+  const JUNK_HASH = /^(astro-[a-z0-9]+|jsx-\d+|css-[a-z0-9]+|s-[a-z0-9]+|data-v-[a-z0-9]+|ng-[a-z0-9]+|sc-[a-zA-Z0-9]+)$/i;
+  const validClasses = (hint.classes || []).filter((c) => !JUNK_HASH.test(c));
+  if (validClasses.length) {
+    const p = validClasses[0].split(/[-_]/).filter(Boolean).map((w) => w[0].toUpperCase() + w.slice(1)).join('');
+    if (p && p.toLowerCase() !== 'div') return p;
+  }
+  if (hint.id && !JUNK_HASH.test(hint.id)) {
+    const p = hint.id.split(/[-_]/).filter(Boolean).map((w) => w[0].toUpperCase() + w.slice(1)).join('');
+    if (p) return p;
+  }
+  if (hint.textSample) {
+    const words = hint.textSample.replace(/[^a-zA-Z0-9\s]/g, ' ').trim().split(/\s+/).filter((b) => b.length >= 3);
+    if (words.length >= 1) {
+      const titleName = words.slice(0, 2).map((w) => w[0].toUpperCase() + w.slice(1).toLowerCase()).join('');
+      return `${titleName}Card`;
+    }
+  }
+  const tag = hint.tag ? hint.tag.toLowerCase() : '';
+  if (tag === 'div') return 'Card';
+  return tag ? tag[0].toUpperCase() + tag.slice(1) : 'CapturedComponent';
 }
 
 function countNodes(node: { children: unknown[] }): number {

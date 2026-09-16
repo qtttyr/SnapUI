@@ -78,6 +78,14 @@ function __snapuiExtract(rootEl, opts) {
       if (p === 'text-align' && (v === 'start' || v === 'left')) continue;
       if (p === 'cursor' && (v === 'auto' || v === 'default')) continue;
       if ((p === 'width' || p === 'height') && v === 'auto') continue;
+      // Do not emit calculated pixel width/height for text & flow elements unless explicitly styled or positioned/replaced.
+      const tag = el.tagName.toLowerCase();
+      const isReplaced = ['img', 'svg', 'video', 'canvas', 'input', 'iframe', 'button'].includes(tag);
+      const isPositioned = positioned === 'absolute' || positioned === 'fixed';
+      const hasInlineSize = el.style && (el.style.width || el.style.height);
+      const isFlowText = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'span', 'b', 'i', 'strong', 'em', 'a', 'label'].includes(tag);
+      if ((p === 'width' || p === 'height') && (isFlowText || (!isReplaced && !isPositioned && !hasInlineSize))) continue;
+
       if ((p === 'min-width' || p === 'min-height') && v === '0px') continue;
       if ((p === 'max-width' || p === 'max-height') && (v === 'none' || v === '0px')) continue;
       if (p === 'background-image' && v === 'none') continue;
