@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     description: 'Live DOM → clean code. Pixel-perfect. Deterministic. Open source.',
     type: 'website',
   },
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
 };
 
 export const viewport: Viewport = {
